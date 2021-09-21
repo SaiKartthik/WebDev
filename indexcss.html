@@ -4,18 +4,34 @@
     <meta charset="utf-8">
     <title>Adding to CSS01</title>
     <style >
-      #heading_2 {
-          color : green ;
+      div{
+        background-color: green;
+        width:400px;
+        height: 500px;
       }
-        .class_heading{
-          color : brown
-        }
+      span{
+        background-color: violet;
+        width: 500px;
+        height:600px;
+      }
     </style>
   </head>
   <body>
-    <h1 class="class_heading">Heading</h1>
-    <p >Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-    <h1 id="heading_2">Heading 2</h1>
-    <p style="color : blue">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    <div >
+      <h2>Pointers for Div</h2>
+      <ol>
+        <li>Width of block level is 100 % of the viewport width</li>
+        <li>height of block should be set by default</li>
+        <li>Height and width can be set explicitly</li>
+      </ol>
+    </div>
+    <span >
+      <h2>Pointers for Div</h2>
+      <ol>
+        <li>Width of inline element is dependent on the content</li>
+        <li>height of inline isn't set by default</li>
+        <li>Height and width cannot be set explicitly</li>
+      </ol>
+    </span>
   </body>
 </html>
