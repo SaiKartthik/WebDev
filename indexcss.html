@@ -6,10 +6,16 @@
     <title>CSS</title>
     <style media="screen">
     *{
-      margin: 20px;
+      margin: 0px;
       padding: 0px;
-      box-sizing: border-box;
-      background-color: #241c44;
+      box-sizing: border-box; 1
+
+    }
+    body{
+      margin-left:100px;
+      margin-top: 100px;
+      background-color: #201434
+;
     }
     .mainDiv{
       background-color : white ;
@@ -19,15 +25,15 @@
       border-radius : 20px;
     }
     .date{
-      background-color:red ;
-      width:60px;
-      height: 60px;
-      position : absolute ;
-      top : 20px ;
-      right : 20px;
-      border-radius : 50% ;
-      padding-top : 15px ;
-      padding-left :10px;
+      background-color: red;
+      color: white;
+      top:-255px;
+      right:-370px;
+      height:50px;
+      width: 50px;
+      padding: 12px;
+      position: relative;
+      border-radius: 50%;
       color : white ;
   }
     .text{
@@ -36,14 +42,15 @@
       font-size : 20px;
       margin-left: inherit;
       margin-right: inherit;
-
+      text-align: center;
+      margin-top: -40px;
 
     }
     .heading{
       background-color :white;
-      padding-left : 38% ;
       font-family: verdana ;
-      margin-top : -8px;
+      margin-top : 0px;
+      text-align: center;
     }
     .image{
       width: 440px;
@@ -66,6 +73,7 @@
         margin-right: auto ;
         border-radius :20px;
         padding-left : 30px;
+
     }
     </style>
   </head>
@@ -74,9 +82,11 @@
 
     <img class="image" src="https://images2.minutemediacdn.com/image/upload/c_crop,h_1286,w_2288,x_0,y_12/f_auto,q_auto,w_1100/v1553818270/shape/mentalfloss/70991-istock-638419754.jpg" alt="Eiffel Tower">
     <h2 class = "heading">Paris</h2>
-    <h3 class="date"> 11 th</h3>
+    <div class="date">
+      <h4>11<sup>th</sup> </h4>
+    </div>
     <div class="text">
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercit
     </div >
 
       <h3 class="visitparis">
