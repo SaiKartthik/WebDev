@@ -1,6 +1,7 @@
-function greet(name)
+function greet(a,b)
 {
-  console.log("hello world",name)
+  console.log("hello world",a)
+  return a+b
 }
-greet("SaiKarthik")
+console.log(greet(1,2))
 console.log("Done");
