@@ -1,8 +1,11 @@
-let response = fetch("https://jsonplaceholder.typicode.com/users")
+var attend = false;
 
-console.log(response)
+const test = new Promise((resolve,reject) =>
+{
+  setTimeout(function() {
+  if(attend) resolve("we attended the concert")
+  else reject("we failed to attend")
+}, 1000);
+});
 
-setTimeout(() => {
-  console.log(response)
-  const data = response.json()
-},2000)
+test.then((data) => console.log(data)).catch((data) => console.log(data))
