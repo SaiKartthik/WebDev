@@ -1,3 +1,5 @@
+//Js async await
+
 var attend = false;
 
 const test = new Promise((resolve,reject) =>
@@ -8,4 +10,13 @@ const test = new Promise((resolve,reject) =>
 }, 1000);
 });
 
-test.then((data) => console.log(data)).catch((data) => console.log(data))
+// test.then((data) => console.log(data)).catch((data) => console.log(data))
+
+const getconcertresult = async () => {
+  try{
+    const getresult = await test;
+    console.log(getresult);}
+  catch(error){
+  console.log(error);
+}};
+getconcertresult();
