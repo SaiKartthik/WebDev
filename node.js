@@ -1,6 +1,6 @@
 const fileSystem = require("fs/promises") ;
 
-//appending a file
+//appending a file rmdir and mkdir
 const fileLesson = async () => {
   await fileSystem.appendFile("file.txt","Sai Karthik");
 }
