@@ -1,7 +1,6 @@
-const fileSystem = require("fs/promises") ;
+const http = require("http")
 
-//appending a file rmdir and mkdir
-const fileLesson = async () => {
-  await fileSystem.appendFile("file.txt","Sai Karthik");
-}
-fileLesson()
+
+http.createServer((request,response) => {
+  response.end("yooo boo")
+}).listen(5000)
