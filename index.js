@@ -14,7 +14,7 @@ deadpool.get("/b2/:id",(req,res) =>
     id : 1 ,
     name : "Sai"
   },
-  {
+  { 
     id : 2 ,
     name : "Karthik"
   },
