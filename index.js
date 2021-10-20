@@ -1,36 +1,15 @@
 const express = require("express")
+//Initialization
+const database = require("./database")
 
-const deadpool = express()
+const booky = express();
 
-deadpool.use(express.json())
+booky.get("/",(req, res) => {
+  return res.json({books: database.books})
 
-deadpool.get("/",(request,response) => {
-  return response.json("Bye World")
 })
 
-deadpool.get("/b2/:id",(req,res) =>
-{
-  studs = [{
-    id : 1 ,
-    name : "Sai"
-  },
-  { 
-    id : 2 ,
-    name : "Karthik"
-  },
-  {
-    id : 3 ,
-    name : "M"
-  }
-]
-  studId = req.params.id
-  getData = studs.filter((i) => parseInt(studId) === i.id)
-  if(getData.length == 0 ) return res.json("No student found")
-
-  return res.json(getData)
-})
-
-deadpool.listen(5000,() => console.log("Getting started 🚀"))
+booky.listen(3000,() => console.log("Server is running👀"))
 
 
 //
