@@ -6,7 +6,7 @@ const books = [{
   numPage : 250 ,
   author : [1,2] ,
   publications : [1] ,
-  category : ["Nothing", "Testing"]
+  category : ["Nothing", "Testing","tech"]
 
 }
 ]
