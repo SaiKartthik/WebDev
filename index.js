@@ -4,6 +4,7 @@ const database = require("./database")
 
 const booky = express();
 
+booky.use(express.json())
 /*
 Route               /
 Description         Get book with ISBN
@@ -115,6 +116,50 @@ booky.get("/author/book/:isbn", (req, res) =>
   else{
   return res.json(getspecificbook)
 }
+})
+
+//Adding a new book
+
+booky.post("/book/add",(req, res) => {
+  const {newBook} = req.body
+  database.books.push(newBook)
+  return res.json({books : database.books})
+})
+
+//adding a new author
+booky.post("/author/add",(req, res) =>
+{
+    const {newAuth} = req.body
+    database.author.push(newAuth)
+    return res.json({Authors : database.author})
+})
+
+//put Methods
+booky.put("/book/update/title/:isbn",(req, res) => {
+    database.books.forEach((book) => {
+      if(book.ISBN === req.params.isbn){
+        book.title = req.body.newBookTitle
+        return
+      }
+    })
+    return res.json({books : database.books})
+})
+
+//Update/add new Author
+
+booky.put("/book/update/author/:isbn/:authorID",(req, res) => {
+  database.books.forEach((book) => {
+    if(book.ISBN === req.params.isbn){
+      return book.author.push(req.params.authorID)
+    }
+  })
+
+  database.author.forEach((book) => {
+    if(author.id === req.params.authorID){
+      return author.books.push(req.params.isbn)
+    }
+  })
+  return res.json({books : database.books, author : database.author})
 })
 
 booky.listen(3000,() => console.log("Server is running 👀"))
