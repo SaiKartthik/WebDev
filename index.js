@@ -150,12 +150,12 @@ booky.put("/book/update/title/:isbn",(req, res) => {
 booky.put("/book/update/author/:isbn/:authorID",(req, res) => {
   database.books.forEach((book) => {
     if(book.ISBN === req.params.isbn){
-      return book.author.push(req.params.authorID)
+      return book.author.push(parseInt(req.params.authorID))
     }
   })
 
   database.author.forEach((book) => {
-    if(author.id === req.params.authorID){
+    if(author.id === parseInt(req.params.authorID)){
       return author.books.push(req.params.isbn)
     }
   })
