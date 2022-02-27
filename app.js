@@ -1,3 +1,9 @@
-path = require('path')
-console.log(path.resolve('./utils.js'));
-console.log(path.join(__dirname, "./app.js"))
+fs = require('fs')
+fs.readFile('./file.txt','utf8',(error, data) => {
+    if(error){
+        console.log(error);
+    }
+    else{
+        console.log(data);
+    }
+})
