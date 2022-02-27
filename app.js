@@ -1,2 +1,2 @@
-x = require("./utils");
-console.log(x.add());
+path = require('path')
+console.log(path.resolve('./utils.js'));
