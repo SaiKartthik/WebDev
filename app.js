@@ -9,3 +9,5 @@ fs.readFile('./file.txt','utf8',(error, data) => {
 })
 
 console.log(fs.readFileSync('./file.txt', 'utf8'))
+
+fs.writeFileSync('./file.txt',"Hello World")
