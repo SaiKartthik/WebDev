@@ -1,11 +1,5 @@
-// var x = fetch("https://jsonplaceholder.typicode.com/users")
-//   .then((res) => res.json())
-//   .then((data) => console.log(data));
-
-var fetchData = async() =>{
-  var x = await fetch("https://jsonplaceholder.typicode.com/users")
-  data = await x.json()
-  console.log(data)
+y = () => {
+    console.log("Greeted")
 }
-
-fetchData()
+module.exports.y = y
+console.log(module.exports)
