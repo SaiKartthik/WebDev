@@ -1,21 +1,14 @@
-// var x = fetch("https://jsonplaceholder.typicode.com/users")
-//   .then((res) => res.json())
-//   .then((data) => console.log(data));
-var body = document.querySelector("body");
-var head = document.querySelector("h1");
-var lst = document.querySelector("ul");
-var ill = ["Dey", "Hads", "hfsguyg"];
+var button = document.querySelector(".button");
+var input = document.querySelector(".input");
+var div = document.querySelector("div");
 
-var x = fetch("https://jsonplaceholder.typicode.com/users")
-  .then((res) => res.json())
-  .then((data) => {
-    var appenddata = (datareq) => {
-        var ele = datareq['name'] + " " + datareq['username'] + datareq['email']
-        var element = document.createElement("li");
-        var textNode = document.createTextNode(ele);
-        element.appendChild(textNode);
-        lst.appendChild(element);
-    }
-    data.forEach(appenddata)
-    console.log(data);
-  });
+list = [1, 2, 3, 4];
+list.push(1);
+y = JSON.parse(localStorage.getItem(input));
+console.log(list);
+console.log(list);
+button.addEventListener("click", () => {
+  div.innerHTML = input.value;
+  list.push(input.value);
+  localStorage.setItem("input", JSON.stringify(list));
+});
