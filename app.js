@@ -3,7 +3,7 @@ var input = document.querySelector(".input");
 var div = document.querySelector("div");
 
 list = [1, 2, 3, 4];
-list.push(1);
+div.innerHTML = JSON.parse(localStorage.getItem(input));
 y = JSON.parse(localStorage.getItem(input));
 console.log(list);
 console.log(list);
