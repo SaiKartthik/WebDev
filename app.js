@@ -4,10 +4,10 @@ const http = require("http");
 const path = require("path");
 const fs = require("fs");
 
-x = fs.readFileSync('./', "utf8");
+x = fs.readFileSync('./index.html');
 const server = http.createServer((request, response) => {
   console.log(request.url);
-  response.write(`<h1>Bye World</h1>`);
+  response.write(x);
   response.end();
 });
 
