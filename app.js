@@ -19,7 +19,10 @@ app.get('/private',isAdmin, (req, res) => {
   res.send("Welcome to Admin routes");
 })
 
-
+// app.post('/signup', (req, res) => {
+//   console.log(req.body);
+//   res.send("Req sent")
+// })
 app.listen(3000, function () {
   console.log("server is running");
 });
