@@ -7,30 +7,20 @@ const names = [
 const express = require("express");
 const app = express();
 
-app.get('/getnames', (req, res) => {
-  res.send(names)
+app.get('/public', (req, res) => {
+  res.send("This is Public");
 })
-app.get("", (req, res) => {
-  res.send("Hello World");
-});
+
+isAdmin = (req, res, next) => {
+  if(req.headers.admin === 'true') next();
+  else res.send("You are not authorised")
+}
+app.get('/private',isAdmin, (req, res) => {
+  res.send("Welcome to Admin routes");
+})
+
 
 app.listen(3000, function () {
   console.log("server is running");
 });
 
-// console.log("Hello world");
-
-// const http = require("http");
-// const path = require("path");
-// const fs = require("fs");
-
-// x = fs.readFileSync('./index.html');
-// const server = http.createServer((request, response) => {
-//   console.log(request.url);
-//   response.write(x);
-//   response.end();
-// });
-
-// server.listen(3000, function () {
-//   console.log("server is running");
-// });
