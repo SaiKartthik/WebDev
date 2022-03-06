@@ -10,11 +10,14 @@ const isAuthorized = (req, res, next) => {
   else res.send("ERROR");
 };
 
-products = [
+const products = [
   { name: "iphone12", price: "$1099" },
   { name: "iphone13", price: "$1199" },
   { name: "iphone14", price: "$1299" },
 ];
+for(x of products){
+  console.log(x.name);
+}
 
 app.post("/products/add", isAuthorized, (req, res) => {
   console.log(req.body);
