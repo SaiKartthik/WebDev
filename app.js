@@ -11,7 +11,7 @@ products = [
 app.post("/products/add", (req, res) => {
   console.log(req.body);
   const{name, price} = req.body;
-  if(!name || !price){
+  if( !name || !price){
     res.send("Validation Failed")
   }
   else{
